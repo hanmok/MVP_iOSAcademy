@@ -9,11 +9,13 @@ import UIKit
 
 // https://jsonplaceholder.typicode.com/users
 
+// all data handling process need to be done in controller if it were mvC
 protocol UserPresenterDelegate: AnyObject {
     func presentUsers(users: [User])
 //    func presentAlert(title: String, message: String)
 }
 
+// delegate of Presenter need to be UIViewController
 typealias PresenterDelegate = UserPresenterDelegate & UIViewController
 
 class UserPresenter {

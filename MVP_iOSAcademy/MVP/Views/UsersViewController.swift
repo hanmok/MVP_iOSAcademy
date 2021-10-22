@@ -60,6 +60,8 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     // Presenter Delegate
+    // View has no connection to Model,
+    // it requests user list from presenter, and presenter send them back.
     
     func presentUsers(users: [User]) {
         self.users = users
@@ -68,4 +70,5 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.tableView.reloadData()
         }
     }
+    
 }
